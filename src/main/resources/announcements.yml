@@ -1,0 +1,13 @@
+enabled: true
+mode: SEQUENTIAL   # SEQUENTIAL or RANDOM
+interval-min: 120  # seconds between announcements
+interval-max: 120  # set higher than min for a random delay
+list:
+  - type: CHAT
+    text: "&aWelcome! There are &e{online} &aplayers online."
+  - type: ACTIONBAR
+    text: "&6Remember to vote for the server!"
+  - type: BOSSBAR
+    text: "&dJoin our Discord for events!"
+  - type: TITLE
+    text: "&6&lEVENT TIME||&fCheck chat for details"

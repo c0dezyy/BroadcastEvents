@@ -1,1 +1,32 @@
+# Prefix for CHAT announcements
+chat-prefix: "&8[&6Broadcast&8] &r"
 
+announce:
+  bossbar-seconds: 10
+  actionbar-seconds: 5
+  title-stay-seconds: 4
+  bossbar-color: YELLOW     # PINK BLUE RED GREEN YELLOW PURPLE WHITE
+  bossbar-overlay: PROGRESS # PROGRESS NOTCHED_6 NOTCHED_10 NOTCHED_12 NOTCHED_20
+
+event:
+  # Who sees the remaining time: ALL (every world), PARTICIPANTS, EVENTWORLD
+  display-scope: ALL
+  bossbar-color: RED
+  bossbar-overlay: PROGRESS
+  # Placeholders: {event} {time} {players}
+  format: "&6&l{event} &7| &fEnds in &e{time} &7| &a/join"
+  title-format: "&6&l{event}||&fEnds in &e{time} &7- &a/join"
+  chat-format: "&6{event} &fends in &e{time} &7- &a/join"
+  start-message: "&a&l{event} &ahas started! Type &e/join &ato take part. Ends in &e{time}&a."
+  end-message: "&c&l{event} &chas ended!"
+  # Chat/title events announce the time left at these seconds
+  milestones: [3600, 1800, 600, 300, 120, 60, 30, 10, 5, 4, 3, 2, 1]
+  gamemode: SURVIVAL        # or KEEP to leave gamemode alone
+  respawn-in-event: true    # dying players respawn at the event spawn with the kit
+  clear-drops-on-death: true
+
+messages:
+  prefix: "&8[&6Events&8] &r"
+  joined: "&aYou joined &e{event}&a. Your inventory and location are saved and will be restored when it ends."
+  restored: "&aYour inventory and location were restored."
+  restored-fallback: "&eYour original world is not available, so you were sent to the main spawn. Your inventory was restored."

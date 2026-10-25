@@ -1,0 +1,30 @@
+name: BroadcastEvents
+version: 1.0.0
+main: com.codezyy.broadcastevents.BroadcastEvents
+api-version: '1.19'
+author: codezyy
+description: Announcements (bossbar/actionbar/chat/title) and timed events with safe inventory restore.
+commands:
+  announce:
+    description: Manage and send announcements
+    aliases: [bc, ann]
+    usage: /announce help
+    permission: broadcastevents.admin
+  event:
+    description: Create and run timed events
+    aliases: [ev]
+    usage: /event help
+    permission: broadcastevents.admin
+  join:
+    description: Join the running event
+    usage: /join [event]
+    permission: broadcastevents.join
+  leave:
+    description: Leave the event and get your items back
+    usage: /leave
+    permission: broadcastevents.join
+permissions:
+  broadcastevents.admin:
+    default: op
+  broadcastevents.join:
+    default: true
